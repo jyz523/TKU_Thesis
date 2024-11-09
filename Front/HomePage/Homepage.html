@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamkang University</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Jost&display=swap" rel="stylesheet" />
+    <!-- Main CSS -->
+    <link href="/Front/HomePage/Homepage.html" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFF3DA;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #FFF3DA;
+        }
+
+        .header img {
+            height: 60px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-buttons button {
+            padding: 10px 20px;
+            background-color: #D91656;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        .left-section {
+            width: 50%;
+        }
+
+        .left-section h1 {
+            font-family: 'Jost', sans-serif;
+            font-size: 48px;
+            color: #D91656;
+            margin-bottom: 20px;
+        }
+
+        .left-section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .right-section {
+            width: 45%;
+            position: relative;
+        }
+
+        .right-section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #D91656;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .color-swatch {
+            margin-left: 20px;
+        }
+
+        .color-swatch div {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+        .red-swatch {
+            background-color: #D91656;
+        }
+
+        .cream-swatch {
+            background-color: #FFF3DA;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<div class="header">
+    <img src="/Front/HomePage/pic/TKU_logo.png" alt="Tamkang University Logo">
+    <div class="nav-buttons">
+        <button>Department</button>
+        <button>Dormitory</button>
+        <button>Campus</button>
+        <button>Daily</button>
+    </div>
+</div>
+
+<!-- Content Section -->
+<div class="container">
+    <div class="left-section">
+        <h1>International</h1>
+        <p>
+            Founded in 1950, Tamkang University is the recognized leading private university in Taiwan, with the longest history and the fastest rate of development. It has four campuses: Tamsui Campus, Taipei Campus, Lanyang Campus, and Cyber Campus. It also has 8 colleges, 52 departments, 48 master's programs, 16 doctoral programs, and has over 23,000 students, more than 1,800 faculty and staff members, and over 270,000 alumni.
+        </p>
+        <p>
+            Since its inception, Tamkang University has been Taiwan’s foremost advocate for the globalization of education. It has forged sister school relationships with 248 universities in 38 countries and is now home to 1,735 overseas students from 56 countries.
+        </p>
+    </div>
+
+    <div class="right-section">
+        <img src="/Front/HomePage/pic/TKU_logo.png" alt="Campus Image">
+    </div>
+</div>
+
+<!-- Color Palette -->
+<div class="color-palette">
+    <span>#FFF3DA - cream beige</span>
+    <div class="color-swatch cream-swatch"></div>
+    <span>#D91656 - red</span>
+    <div class="color-swatch red-swatch"></div>
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+    Contact us
+</div>
+
+</body>
+</html>
