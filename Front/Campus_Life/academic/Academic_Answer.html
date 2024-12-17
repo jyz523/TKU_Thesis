@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tamkang University Academic Information">
+    <title>TKU Academic</title>
+    <link rel="stylesheet" href="Academic_Answer.css">
+</head>
+
+<body>
+<!-- Header Section -->
+<header>
+    <div class="topbar">
+        <a href="/server.js/Front/HomePage/HomePage.html">
+            <img src="../../public/logo.png" alt="Tamkang University Logo" class="logo">
+        </a>
+        <nav class="nav-buttons" aria-label="Main navigation TKU campus life">
+            <a href="../school/school.html" class="button" aria-label="School">School</a>
+            <a href="../holiday/Holiday.html" class="button" aria-label="Holiday">Holiday</a>
+            <a href="Academic.html" class="button" aria-label="Academic">Academic</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Main Content Section -->
+<main>
+    <section class="content-section">
+        <h1 class="section-title">Academic</h1>
+        <div class="content">
+            <!-- Info List -->
+            <div class="info-list">
+                <div class="info-item" onclick="showDetail('B building')">
+                    <p>Where to pay tuition in cash</p>
+                    <span class="info-arrow">&gt;</span>
+                </div>
+
+                <div class="info-item" onclick="showDetail('Click <a href=&quot;https://school.yuantabank.com.tw/school/tx/foreignplatform?method=receiptonline_result&sch=TKU&langPara=C&quot; target=&quot;_blank&quot;>here</a> to pay tuition online')">
+                    <p>Where to pay tuition online</p>
+                    <span class="info-arrow">&gt;</span>
+                </div>
+
+                <div class="info-item" onclick="showDetail('Enrollment Machine in A Building or Electronic version: <a href=&quot;https://ctferm.ais.tku.edu.tw/&quot; target=&quot;_blank&quot;>click here</a>')">
+                    <p>Where to get certification of enrollment</p>
+                    <span class="info-arrow">&gt;</span>
+                </div>
+
+                <div class="info-item"
+                     onclick="showDetail(
+                        'Learning and Practice of Clubs:<br>' +
+                        'A: Go to classes from the same club 6 times.<br>' +
+                        'B: Attend an event 3 times from the same club.<br>' +
+                        'C: Participate in a club-hosted event.<br>' +
+                        '<strong style=&quot;color: red;&quot;>Remember to fill Club Activity Form after club activity ends</strong> <a href=&quot;https://lpcs.tku.edu.tw/LPCS/fc_news/fc_news_all.aspx?mode=none/&quot; target=&quot;_blank&quot;>click here</a>')">
+                    <p>How to get club ABC credit</p>
+                    <span class="info-arrow">&gt;</span>
+                </div>
+
+
+                <div class="info-item" onclick="showDetail('Click <a href=&quot;http://www.oieie.tku.edu.tw/en/LinkStudent/Scholarships&quot; target=&quot;_blank&quot;>here</a> for TKU Scholarship details')">
+                    <p>TKU scholarship</p>
+                    <span class="info-arrow">&gt;</span>
+                </div>
+
+                <div class="info-item" onclick="showDetail('Click <a href=&quot;https://english.tku.edu.tw/calendar.asp&quot; target=&quot;_blank&quot;>here</a> for Exam Dates')">
+                    <p>Exam Date</p>
+                    <span class="info-arrow">&gt;</span>
+                </div>
+            </div>
+
+            <div class="display-box">
+                <p id="info-display">Click on an item to see details here!</p>
+            </div>
+        </div>
+    </section>
+    <a href="Academic.html" class="back-button" aria-label="Go Back">⟵</a>
+</main>
+
+<script>
+    function showDetail(detail) {
+        const infoDisplay = document.getElementById('info-display');
+        infoDisplay.innerHTML = detail;
+    }
+</script>
+
+</body>
+
+</html>

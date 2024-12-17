@@ -1,0 +1,224 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Colors */
+:root {
+  --cream-beige: #FFF3DA;
+  --tamkang-red: #D91656;
+  --black: #000;
+  --white: #fff;
+}
+
+/* Body */
+body {
+  background-color: var(--cream-beige);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Topbar and Logo */
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+}
+
+.logo {
+  position: absolute; /* Position*/
+  top: 20px;
+  left: 20px;
+  max-width: 245px; /*logo size */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end; /* Aligns buttons to the right */
+  gap: 50px; /* Spacing between buttons */
+  margin-right: 50px; /* Adjusts the right margin to move buttons inward */
+  padding: 0 300px; /* Adds consistent horizontal padding */
+}
+
+
+/* Navigation */
+.nav button {
+  margin: 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--white);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+nav button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* General Button Style */
+.button {
+  padding: 8px 20px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: var(--white);
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Ensure visited links don’t show a marked color */
+.button:visited {
+  color: #333;
+  background-color: var(--white);
+}
+
+.button:hover {
+  background-color: #333;
+  color: var(--white);
+}
+
+/* Content Section */
+.content-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #FFF3DA;
+  border: 2px solid #333;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  position: relative;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.2em;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+}
+
+/* Content Layout */
+.content {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap; /* Allows content to wrap for smaller screens */
+}
+
+/* Image Gallery (Fixed on Left) */
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery-image {
+  width: 100%; /* Adjust dynamically */
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Info List */
+.info-list {
+  text-align: left;
+  max-width: 700px;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adds spacing between questions */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Info List Paragraph */
+.info-list p {
+  font-size: 1.4em;
+  padding: 15px;
+  background-color: #f0ece1;
+  border-radius: 8px;
+  color: #333;
+  border-left: 4px solid #333;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Makes width dynamic */
+  max-width: 500px; /* Prevents it from being too wide */
+}
+
+.info-list a {
+  display: block;
+  width: 100%; /* Allows link blocks to resize dynamically */
+  text-decoration: none;
+}
+
+.info-list a:hover p {
+  background-color: #e0dbc7;
+}
+
+/* Responsive Design: Tablets */
+@media (max-width: 768px) {
+  .content-section {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .content {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+  }
+
+  .gallery-image {
+    max-width: 300px; /* Shrink image size */
+  }
+
+  .section-title {
+    font-size: 1.8em;
+  }
+
+  .info-list p {
+    font-size: 1.2em;
+  }
+}
+
+/* Responsive Design: Mobile */
+@media (max-width: 480px) {
+  .content-section {
+    padding: 15px;
+  }
+
+  .gallery-image {
+    max-width: 100%; /* Full width for small screens */
+  }
+
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .info-list p {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .nav-buttons {
+    flex-direction: column; /* Stack nav buttons vertically */
+    gap: 10px;
+  }
+}
