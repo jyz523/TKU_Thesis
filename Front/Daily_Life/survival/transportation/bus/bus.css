@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Colors */
+:root {
+    --cream-beige: #FFF3DA;
+    --tamkang-red: #D91656;
+    --black: #000;
+    --white: #fff;
+}
+
+/* Body */
+body {
+    background-color: var(--cream-beige);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Topbar and Logo */
+.topbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 245px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    margin-right: 50px;
+    padding: 0 300px;
+}
+
+
+/* Navigation */
+.nav button {
+    margin: 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--white);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* General Button Style */
+.button {
+    padding: 8px 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: var(--white);
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Ensure visited links don’t show a marked color */
+.button:visited {
+    color: #333;
+    background-color: var(--white);
+}
+
+.button:hover {
+    background-color: #333;
+    color: var(--white);
+}
+
+
+/* Main Guide Container */
+.guide-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.step, .extra {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.step img, .extra img {
+    width: 350px;
+    height: 680px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+
+.step p:nth-child(1) {
+    color: red;
+}
+
+.step p:nth-child(2) {
+    color: green;
+}
+
+.step p:nth-child(3) {
+    color: blue;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .guide-container {
+        grid-template-columns: 1fr;
+    }
+
+    .extra {
+        grid-column: span 1;
+    }
+}

@@ -1,0 +1,160 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Colors */
+:root {
+    --cream-beige: #FFF3DA;
+    --tamkang-red: #D91656;
+    --black: #000;
+    --white: #fff;
+}
+
+/* Body */
+body {
+    background-color: var(--cream-beige);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Topbar and Logo */
+.topbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.logo {
+    position: absolute; /* Position*/
+    top: 20px;
+    left: 20px;
+    max-width: 245px; /*logo size */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    gap: 50px; /* Spacing between buttons */
+    margin-right: 50px; /* Adjusts the right margin to move buttons inward */
+    padding: 0 300px; /* Adds consistent horizontal padding */
+}
+
+
+/* Navigation */
+.nav button {
+    margin: 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--white);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* General Button Style */
+.button {
+    padding: 8px 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: var(--white);
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Ensure visited links don’t show a marked color */
+.button:visited {
+    color: #333;
+    background-color: var(--white);
+}
+
+.button:hover {
+    background-color: #333;
+    color: var(--white);
+}
+
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.content-card {
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Card Images */
+.card-image {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/* To allow customization per image */
+.card-image.phone {
+    max-height: 120px;
+}
+
+.card-image.supermarket {
+    max-height: 140px;
+}
+
+.card-image.transportation {
+    max-height: 130px;
+}
+
+.card-image.postoffice {
+    max-height: 150px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
