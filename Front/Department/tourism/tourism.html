@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Department Information Page">
+    <title>Department Information</title>
+    <link rel="stylesheet" href="tourism.css">
+</head>
+<body>
+<div class="image-container">
+    <img src="tourism_logo.png" alt="Centered Image" class="center-image">
+</div>
+<!-- Top Bar with Logo Centered Above the Content -->
+<header class="topbar">
+    <a href="/server.js/Front/HomePage/Homepage.html">
+        <img src="../../public/logo.png" alt="Tamkang University Logo" class="logo">
+    </a>
+</header>
+
+<main>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="/server.js/Front/Department/csie/csie.html">CSIE</a></li>
+            <li><a href="/server.js/Front/Department/ddir/ddir.html">DDIR</a></li>
+            <li><a href="/server.js/Front/Department/english/english.html">English</a></li>
+            <li><a href="/server.js/Front/Department/globalfinance/globalfinance.html">Global Financial</a></li>
+            <li><a href="/server.js/Front/Department/globalpolicy/gp.html" >Global Policy and Economic</a></li>
+            <li><a href="/server.js/Front/Department/internationalib/internationalib.html" >International Business</a></li>
+            <li><a href="/server.js/Front/Department/tourism/tourism.html" class="active">Tourism</a></li>
+            <li><a href="/server.js/Front/Department/gec/gec.html" >General Education Credit</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <section class="content">
+        <div class="igr">
+            <h2>Introduction</h2>
+            <div class="card">
+                <p>
+                    The Department of International Tourism Management is a key component in Tamkang University’s (TKU) development. A significant amount of resources has been devoted to its establishment.
+                    The decision for this large investment was made after carefully considering TKU’s vision for the future.
+                    The Department of International Tourism Management was founded in 2006 on Lanyang Campus and steadily developed with the TKU’s triple objectives of “globalization, information-oriented education,
+                    and future-oriented education”; its alumni’s performance has earned recognition for their compelling achievement since then.
+                </p>
+                <br>
+                <p>
+                    Prior to the pandemic, the statistics reported by World Tourism Organization shows that tourism industry had been accelerating for a consecutive decade between 2009 and 2019 in both international tourist arrivals and total international tourism receipts.
+                    It is expected that tourism will rebound rapidly with the pace of vaccination worldwide.
+                    In such a wave of transition, the Department of International Tourism Management is relocating to Tamsui Campus and ensures to continue cultivating practitioners in various fields with all of its courses delivered in English, and a junior year abroad program for all its students.
+                </p>
+            </div>
+        </div>
+
+        <div class="igr">
+            <h2>Graduate Credit / English Certification</h2>
+            <div class="card">
+                <ul>
+                    <li><strong>Total 128 Credits:</strong></li>
+                    <li>Department Required Credit (51)</li>
+                    <li>General Education Credit (24)</li>
+                    <li>Department Elective Credit (22)</li>
+                    <li>Free Elective Credit (29)</li>
+                    <li>Third year study abroad credit(0)</li>
+                    <br>
+                    <li><strong>Study 1 year in department selected university:</strong></li>
+                    <li>Selected foreign university(Required Expenses)
+                    <li>TKU tuition 25%(maintain tku enrollment)</li>
+                    <br>
+                    <li><strong>Pass internship in Tourism industry (in Taiwan or Foreign country)</strong></li>
+                    <li><strong>Get Tourism certification license</strong></li><br>
+
+                    <li><strong>English Level Certification:</strong></li>
+                    <li>GEPT(intermediate level, preliminary test) :</li>
+                    <li>TOEIC: 550</li>
+                    <li>TOFEL CBT: 123</li>
+                    <li>TOFEL iBT: 42</li>
+                    <li>TOFEL PBT/ITP: 460</li>
+                    <li>IELTS: 4.0</li>
+                    <li>CEF: B1</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="igr">
+            <h2>Required Course List</h2>
+            <div class="card">
+                <img src="tourism_pic.png" alt="Required Course List">
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const images = document.querySelectorAll(".card img");
+
+                        images.forEach((img) => {
+                            img.addEventListener("click", () => {
+                                // Check if the image is already zoomed
+                                if (img.classList.contains("zoomed")) {
+                                    img.classList.remove("zoomed"); // Remove zoom
+                                } else {
+                                    // Ensure no other image is zoomed
+                                    document.querySelectorAll(".zoomed").forEach((zoomedImg) => {
+                                        zoomedImg.classList.remove("zoomed");
+                                    });
+                                    img.classList.add("zoomed"); // Apply zoom
+                                }
+                            });
+                        });
+                    });
+                </script>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

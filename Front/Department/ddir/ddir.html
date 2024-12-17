@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Department Information Page">
+    <title>Department Information</title>
+    <link rel="stylesheet" href="ddir.css">
+</head>
+<body>
+<div class="image-container">
+    <img src="ddir_logo.png" alt="Centered Image" class="center-image">
+</div>
+<!-- Top Bar with Logo Centered Above the Content -->
+<header class="topbar">
+    <a href="/server.js/Front/HomePage/Homepage.html">
+        <img src="../../public/logo.png" alt="Tamkang University Logo" class="logo">
+    </a>
+</header>
+
+<main>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="/server.js/Front/Department/csie/csie.html">CSIE</a></li>
+            <li><a href="/server.js/Front/Department/ddir/ddir.html" class="active">DDIR</a></li>
+            <li><a href="/server.js/Front/Department/english/english.html">English</a></li>
+            <li><a href="/server.js/Front/Department/globalfinance/globalfinance.html">Global Financial</a></li>
+            <li><a href="/server.js/Front/Department/globalpolicy/gp.html">Global Policy and Economic</a></li>
+            <li><a href="/server.js/Front/Department/internationalib/internationalib.html">International Business</a></li>
+            <li><a href="/server.js/Front/Department/tourism/tourism.html">Tourism</a></li>
+            <li><a href="/server.js/Front/Department/gec/gec.html">General Education Credit</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <section class="content">
+        <div class="igr">
+            <h2>Introduction</h2>
+            <div class="card">
+                <p>
+                    Our department started to recruit students in 2015. We established Department of Diplomacy and International Relations
+                    (DDIR) under the background of constantly changing globalization.
+                    Due to the shortening distances between international members,
+                    countries keep in touch with each other more nowadays and derive various complicated international issues.
+                </p>
+                <br>
+                <p>
+                    The professional expertise of global vision has turned into basic knowledge in domestic education.
+                    The professional expertise didn't fade out along with the disappearing boundary between countries but
+                    became more important in diplomacy. The impact of globalization also affects Taiwan from the whole country
+                    to domestic industries. Thus, cultivating experts in theoretical, practical, and foreign language abilities
+                    is basic to the future development of the country. The establishment purposes of our department are
+                    (1) Global vision (2) Foreign language ability (3) Diversify Cultures (4) Residents of Worldwide.
+                    Excluding cultivating experts in theoretical, practical, and foreign language abilities,
+                    we're looking forward to students flourishing in this diversified department with half of people
+                    from all over 45 different countries. Under a free, diversify, open international environment,
+                    learning to become a part of this global village, and devote to international affairs.
+                </p>
+            </div>
+        </div>
+
+        <div class="igr">
+            <h2>Graduate Credit / English Certification</h2>
+            <div class="card">
+                <ul>
+                    <li><strong>Total 128 Credits:</strong></li>
+                    <li>Department Required Credit (48)</li>
+                    <li>General Education Credit (26)</li>
+                    <li>Department Elective Credit (18)</li>
+                    <li>Free Elective Credit (32)</li>
+                    <li>Compulsory Course for common college(2)</li><br>
+
+                    <li><strong>Study 1 year in department-selected university:</strong></li>
+                    <li>Selected foreign university fees</li>
+                    <li>TKU tuition 25% (maintain TKU enrollment)</li><br>
+
+                    <li><strong>English Level Certification:</strong></li>
+                    <li>No INFO</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="igr">
+            <h2>Required Course List</h2>
+            <div class="card">
+                <img src="../ddir/ddir_pic.png" alt="Required Course List">
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const images = document.querySelectorAll(".card img");
+
+                        images.forEach((img) => {
+                            img.addEventListener("click", () => {
+                                // Check if the image is already zoomed
+                                if (img.classList.contains("zoomed")) {
+                                    img.classList.remove("zoomed"); // Remove zoom
+                                } else {
+                                    // Ensure no other image is zoomed
+                                    document.querySelectorAll(".zoomed").forEach((zoomedImg) => {
+                                        zoomedImg.classList.remove("zoomed");
+                                    });
+                                    img.classList.add("zoomed"); // Apply zoom
+                                }
+                            });
+                        });
+                    });
+                </script>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

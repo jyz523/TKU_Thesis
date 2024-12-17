@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Department Information Page">
+    <title>Department Information</title>
+    <link rel="stylesheet" href="english.css">
+</head>
+<body>
+<div class="image-container">
+    <img src="english_logo.png" alt="Centered Image" class="center-image">
+</div>
+<!-- Top Bar with Logo Centered Above the Content -->
+<header class="topbar">
+    <a href="/server.js/Front/HomePage/Homepage.html">
+        <img src="../../public/logo.png" alt="Tamkang University Logo" class="logo">
+    </a>
+</header>
+
+<main>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="/server.js/Front/Department/csie/csie.html">CSIE</a></li>
+            <li><a href="/server.js/Front/Department/ddir/ddir.html">DDIR</a></li>
+            <li><a href="/server.js/Front/Department/english/english.html" class="active">English</a></li>
+            <li><a href="/server.js/Front/Department/globalfinance/globalfinance.html">Global Financial</a></li>
+            <li><a href="/server.js/Front/Department/globalpolicy/gp.html">Global Policy and Economic</a></li>
+            <li><a href="/server.js/Front/Department/internationalib/internationalib.html">International Business</a></li>
+            <li><a href="/server.js/Front/Department/tourism/tourism.html">Tourism</a></li>
+            <li><a href="/server.js/Front/Department/gec/gec.html">General Education Credit</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <section class="content">
+        <div class="igr">
+            <h2>Introduction</h2>
+            <div class="card">
+                <p>
+                    The Department of English at Tamkang University aims to develop students' foundational skills in
+                    English language and basic professional competencies, preparing them for careers in education,
+                    commerce, and industry. The Master's program emphasizes academic research skills, teaching,
+                    translation, and cultural studies, while the Doctoral program cultivates advanced professionals
+                    in English and teaching research for roles in literature and education. Established in 1950,
+                    the department initially provided non-degree English language and literature courses for junior
+                    and senior high school graduates, transitioning in 1965 to a Bachelor’s degree curriculum.
+                    Since then, it has played a significant role in Taiwan’s English education, fostering proactive,
+                    professional, and globally-minded specialists for various public and private institutions through
+                    a robust faculty and diverse, dynamic teaching activities.
+                </p>
+            </div>
+        </div>
+
+        <div class="igr">
+            <h2>Graduate Credit / English Certification</h2>
+            <div class="card">
+                <ul>
+                    <li><strong>Total 128 Credits:</strong></li>
+                    <li>Department Required Credit (46)</li>
+                    <li>General Education Credit (26)</li>
+                    <li>Department Elective Credit (18)</li>
+                    <li>Free Elective Credit (36)</li><br>
+
+
+                    <li><strong>If previous semester score lower than 50 or didn’t take the course, then next semester course:</strong></li>
+                    <li>British Literature</li>
+                    <li>English essay(1), English essay(2)</li>
+                    <li>English conversation, English oral communication skill</li><br>
+
+                    <li><strong>Study 1 year in department selected university:</strong></li>
+                    <li>Selected foreign university(Required Expenses)
+                    <li>TKU tuition 25%(maintain tku enrollment)</li><br>
+
+
+                    <li><strong>English Level Certification:</strong></li>
+                    <li>GEPT(intermediate advanced level,  preliminary test)
+                        <br>
+                        Cambridge Main Suite: First Certificate in English(FCE)
+                        <br>
+                        Linguaskill: 160+
+                        <br>
+                        CEF: B2 Vantage
+                        <br>
+                        TOEIC: 780+
+                        <br>
+                        CSEPT: Level 2 Score 330
+                        <br>
+                        IELTS: 5.5
+                        <br>
+                        TOFEL CBT: 197+
+                        <br>
+                        TOFEL iBT: 87+
+                        <br>
+                        TOFEL PBT: 527+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="igr">
+            <h2>Required Course List</h2>
+            <div class="card">
+                <img src="../english/english_pic.png" alt="Required Course List">
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const images = document.querySelectorAll(".card img");
+
+                        images.forEach((img) => {
+                            img.addEventListener("click", () => {
+                                // Check if the image is already zoomed
+                                if (img.classList.contains("zoomed")) {
+                                    img.classList.remove("zoomed"); // Remove zoom
+                                } else {
+                                    // Ensure no other image is zoomed
+                                    document.querySelectorAll(".zoomed").forEach((zoomedImg) => {
+                                        zoomedImg.classList.remove("zoomed");
+                                    });
+                                    img.classList.add("zoomed"); // Apply zoom
+                                }
+                            });
+                        });
+                    });
+                </script>
+
+            </div>
+        </div>
+
+    </section>
+</main>
+
+</body>
+</html>

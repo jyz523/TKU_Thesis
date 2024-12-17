@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Department Information Page">
+    <title>Department Information</title>
+    <link rel="stylesheet" href="gec.css">
+</head>
+<body>
+<div class="image-container">
+    <img src="" class="center-image">
+</div>
+<!-- Top Bar with Logo Centered Above the Content -->
+<header class="topbar">
+    <a href="/server.js/Front/HomePage/Homepage.html">
+        <img src="../../public/logo.png" alt="Tamkang University Logo" class="logo">
+    </a>
+</header>
+
+<main>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="/server.js/Front/Department/csie/csie.html">CSIE</a></li>
+            <li><a href="/server.js/Front/Department/ddir/ddir.html">DDIR</a></li>
+            <li><a href="/server.js/Front/Department/english/english.html">English</a></li>
+            <li><a href="/server.js/Front/Department/globalfinance/globalfinance.html">Global Financial</a></li>
+            <li><a href="/server.js/Front/Department/globalpolicy/gp.html">Global Policy and Economic</a></li>
+            <li><a href="/server.js/Front/Department/internationalib/internationalib.html">International Business</a></li>
+            <li><a href="/server.js/Front/Department/tourism/tourism.html">Tourism</a></li>
+            <li><a href="/server.js/Front/Department/gec/gec.html" class="active">General Education Credit</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <section class="content">
+        <div class="igr">
+            <h2>Introduction</h2>
+            <div class="card">
+                <p>
+                    The General Education Interdisciplinary Micro Program is centered around thematic issues, constructing an interdisciplinary learning environment. It integrates courses from various fields of general education and academic departments, combining social responsibility, practical work, and self-directed learning.
+                 <br>
+                    The program is divided into three main areas: 'Basic Interdisciplinary', 'Thematic Issues', and 'Practical Orientation'.
+                    It aims to inspire students' interdisciplinary thinking, deeply connect knowledge, emphasize practical application, and cultivate STEAM talents, laying the foundation for holistic education.
+          <br>
+
+            </div>
+        </div>
+
+        <div class="igr">
+            <h2>Required Course List</h2>
+            <div class="card">
+                <img src="gec_pic.png" alt="Required Course List">
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const images = document.querySelectorAll(".card img");
+
+                        images.forEach((img) => {
+                            img.addEventListener("click", () => {
+                                // Check if the image is already zoomed
+                                if (img.classList.contains("zoomed")) {
+                                    img.classList.remove("zoomed"); // Remove zoom
+                                } else {
+                                    // Ensure no other image is zoomed
+                                    document.querySelectorAll(".zoomed").forEach((zoomedImg) => {
+                                        zoomedImg.classList.remove("zoomed");
+                                    });
+                                    img.classList.add("zoomed"); // Apply zoom
+                                }
+                            });
+                        });
+                    });
+                </script>
+
+
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

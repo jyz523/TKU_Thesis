@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Department Information Page">
+    <title>Department Information</title>
+    <link rel="stylesheet" href="gp.css">
+</head>
+<body>
+<div class="image-container">
+    <img src="gp_logo.png" alt="Centered Image" class="center-image">
+</div>
+<!-- Top Bar with Logo Centered Above the Content -->
+<header class="topbar">
+    <a href="/server.js/Front/HomePage/Homepage.html">
+        <img src="../../public/logo.png" alt="Tamkang University Logo" class="logo">
+    </a>
+</header>
+
+<main>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="/server.js/Front/Department/csie/csie.html">CSIE</a></li>
+            <li><a href="/server.js/Front/Department/ddir/ddir.html">DDIR</a></li>
+            <li><a href="/server.js/Front/Department/english/english.html">English</a></li>
+            <li><a href="/server.js/Front/Department/globalfinance/globalfinance.html">Global Financial</a></li>
+            <li><a href="/server.js/Front/Department/globalpolicy/gp.html" class="active">Global Policy and Economic</a></li>
+            <li><a href="/server.js/Front/Department/internationalib/internationalib.html">International Business</a></li>
+            <li><a href="/server.js/Front/Department/tourism/tourism.html">Tourism</a></li>
+            <li><a href="/server.js/Front/Department/gec/gec.html" >General Education Credit</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <section class="content">
+        <div class="igr">
+            <h2>Introduction</h2>
+            <div class="card">
+                <p>
+                    Established on the Lanyang campus in 2005, the Department of Global Politics and Economics aims to develop globally political and economic knowledge and skills for students on the
+                    basis of holistic education. For the purpose of cultivating students’ abilities in policy analysis and recommendation, a formal education in internationally political
+                    and economic issues, foreign languages, and morality has been systematically continued.
+                </p>
+                <br>
+                <p>
+                    In order to foster students’ multiculturalism, the Department is also devoted to promoting the Global Service
+                    Internship Program (GSIP). Through this project, participants are able to work in non-governmental organizations in different countries
+                    to explore cultural diversity and build a sense of humanity.
+                </p>
+            </div>
+        </div>
+
+        <div class="igr">
+            <h2>Graduate Credit / English Certification</h2>
+            <div class="card">
+                <ul>
+                    <li><strong>Total 128 Credits:</strong></li>
+                    <li>Department Required Credit (34)</li>
+                    <li>General Education Credit (24)</li>
+                    <li>Department Elective Credit (34)</li>
+                    <li>Free Elective Credit (36)</li>
+                    <li>Third year study abroad credit(0)</li>
+                    <br>
+
+                    <li><strong>Study 1 year in department selected university:</strong></li>
+                    <li>Selected foreign university(Required Expenses)
+                    <li>TKU tuition 25%(maintain tku enrollment)</li><br>
+
+                    <li><strong>English Level Certification:</strong></li>
+                    <li>No INFO</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="igr">
+            <h2>Required Course List</h2>
+            <div class="card">
+                <img src="gp_pic.png" alt="Required Course List">
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const images = document.querySelectorAll(".card img");
+
+                        images.forEach((img) => {
+                            img.addEventListener("click", () => {
+                                // Check if the image is already zoomed
+                                if (img.classList.contains("zoomed")) {
+                                    img.classList.remove("zoomed"); // Remove zoom
+                                } else {
+                                    // Ensure no other image is zoomed
+                                    document.querySelectorAll(".zoomed").forEach((zoomedImg) => {
+                                        zoomedImg.classList.remove("zoomed");
+                                    });
+                                    img.classList.add("zoomed"); // Apply zoom
+                                }
+                            });
+                        });
+                    });
+                </script>
+
+
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

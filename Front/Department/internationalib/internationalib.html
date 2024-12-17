@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Department Information Page">
+    <title>Department Information</title>
+    <link rel="stylesheet" href="internationalib.css">
+</head>
+<body>
+<div class="image-container">
+    <img src="ib_logo.png" alt="Centered Image" class="center-image">
+</div>
+
+<!-- Top Bar with Logo Centered Above the Content -->
+<header class="topbar">
+    <a href="/server.js/Front/HomePage/Homepage.html">
+        <img src="../../public/logo.png" alt="Tamkang University Logo" class="logo">
+    </a>
+</header>
+
+<main>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="/server.js/Front/Department/csie/csie.html">CSIE</a></li>
+            <li><a href="/server.js/Front/Department/ddir/ddir.html">DDIR</a></li>
+            <li><a href="/server.js/Front/Department/english/english.html">English</a></li>
+            <li><a href="/server.js/Front/Department/globalfinance/globalfinance.html">Global Financial</a></li>
+            <li><a href="/server.js/Front/Department/globalpolicy/gp.html" >Global Policy and Economic</a></li>
+            <li><a href="/server.js/Front/Department/internationalib/internationalib.html" class="active">International Business</a></li>
+            <li><a href="/server.js/Front/Department/tourism/tourism.html">Tourism</a></li>
+            <li><a href="/server.js/Front/Department/gec/gec.html" >General Education Credit</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <section class="content">
+        <div class="igr">
+            <h2>Introduction</h2>
+            <div class="card">
+                <p>
+                    The Department of International Business was established in 1963 in order to adapt to the nation’s economic development and cultivate students
+                    with specialized knowledge in commercial affairs in general and in international
+                    commercial affairs in particular. In the early stage, classes were only taught in the evenings.
+                </p>
+                <br>
+                <p>
+                    In 1965 the Department was reorganized and started to offer classes in both day and evening divisions, with each division enrolling two classes of students per year.
+                <br>
+                    In 1982, the Department was expanded to enroll three classes for both the day and evening divisions. Courses offered at that time were mainly concerned with theories, policies, and practices that are related to economics, marketing, finance, and foreign trade.
+                </p>
+            </div>
+        </div>
+
+        <div class="igr">
+            <h2>Graduate Credit / English Certification</h2>
+            <div class="card">
+                <ul>
+                    <li><strong>Total 128 Credits:</strong></li>
+                    <li>Department Required Credit (52)</li>
+                    <li>General Education Credit (24)</li>
+                    <li>Department Elective Credit (27)</li>
+                    <li>Free Elective Credit (25)</li>
+                    <li>Third year study abroad credit(0)</li>
+                    <br>
+                    <li><strong>Study 1 year in department selected university:</strong></li>
+                    <li>Selected foreign university(Required Expenses)
+                    <li>TKU tuition 25%(maintain tku enrollment)</li><br>
+
+                    <li><strong>English Level Certification:</strong></li>
+                    <li>No INFO</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="igr">
+            <h2>Required Course List</h2>
+            <div class="card">
+                <img src="ib_pic.png" alt="Required Course List">
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const images = document.querySelectorAll(".card img");
+
+                        images.forEach((img) => {
+                            img.addEventListener("click", () => {
+                                // Check if the image is already zoomed
+                                if (img.classList.contains("zoomed")) {
+                                    img.classList.remove("zoomed"); // Remove zoom
+                                } else {
+                                    // Ensure no other image is zoomed
+                                    document.querySelectorAll(".zoomed").forEach((zoomedImg) => {
+                                        zoomedImg.classList.remove("zoomed");
+                                    });
+                                    img.classList.add("zoomed"); // Apply zoom
+                                }
+                            });
+                        });
+                    });
+                </script>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
